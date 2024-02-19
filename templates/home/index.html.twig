@@ -1,15 +1,47 @@
 {% extends 'base.html.twig' %}
-
-{% block title %}Home{% endblock %}
-
-{% block body %}
-    <div class="pink-stripe">
-        <h1>
-            Let's start coding&nbsp;&#129304;
-        </h1>
+{% block title %} {{ parent() }} {{ pageName }} {% endblock %} {% block stylesheet %}
+<link rel="stylesheet" href="assets/css/banner.css" />
+{% endblock %}
+{% block header %}{% endblock %}
+{% block content %}
+<div id="carouselExampleAutoplaying"
+    class="carousel slide"
+    data-bs-ride="carousel">
+    <div class="main-banner">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="item item-1">
+                    <div class="header-text">
+                        <a href="mocktails"><h1>
+                                Venez!<br />vite découvrir nos mocktails
+                            </h1></a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="item item-2">
+                    <div class="header-text">
+                        <h1>A venir...<br /></h1></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    <div class="white-stripe">
-        <img src="{{ asset('build/images/logo-wild-code-school.svg') }}"
-             alt="">
-    </div>
+</div>
 {% endblock %}
