@@ -11,8 +11,6 @@ class MocktailController extends AbstractController
     #[Route('/mocktail/show', name: 'app_mocktail')]
     public function index(): Response
     {
-        return $this->render('mocktail/show.html.twig', [
-            'pageName' => 'Show Mocktail',
-        ]);
+        return $this->render('mocktail/show.html.twig');
     }
 }
