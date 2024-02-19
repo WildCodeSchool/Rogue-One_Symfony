@@ -12,7 +12,7 @@ class MocktailController extends AbstractController
     public function index(): Response
     {
         return $this->render('mocktail/index.html.twig', [
-            'pageName' => 'Mocktails',
+            'pageName' => "Nos Mocktails",
         ]);
     }
 }
