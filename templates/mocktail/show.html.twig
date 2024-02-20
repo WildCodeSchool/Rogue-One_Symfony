@@ -1,126 +1,60 @@
-{% extends 'base.html.twig' %} {% block title %} {{ parent() }} {#
-{{ mocktail.name }} #} {% endblock %} {% block stylesheet %}
-<link rel="stylesheet" href="assets/styles/pages/mocktail_show.css" />
-<link
-    rel="stylesheet"
-    href="//use.fontawesome.com/releases/v5.0.7/css/all.css"
-/>
-{% endblock %} {% block header %}
-<div class="page-heading header-text">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1>{{ mocktail.name }}</h1>
-            </div>
-        </div>
-    </div>
-</div>
+{% extends 'base.html.twig' %} {% block title %}
+{{ parent() }}
+{{ mocktail.name }} - Mocktail Details {% endblock %} {% block stylesheet %}
+<link rel="stylesheet" href="assets/styles/pages/mocktail-show.css" />
 {% endblock %} {% block content %}
-<div class="section title-detail-page">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="section-heading">
-                    <a href="/mocktails"> Retour</a>/{{ mocktail.name }}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="single-mocktail section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="main-image">
-                    <img
-                        src="assets/images/mocktails/{{ mocktail.image }}"
-                        class="img-thumbnail"
-                        alt="{{ mocktail.name }}"
-                    />
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="main-content">
-                    <h1>{{ mocktail.name }}</h1>
-                    <span>Prix : {{ mocktail.price }}0 €</span>
-                </div>
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button
-                                class="accordion-button"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne"
-                                aria-expanded="true"
-                                aria-controls="collapseOne"
-                            >
-                                Description
-                            </button>
-                        </h2>
-                        <div
-                            id="collapseOne"
-                            class="accordion-collapse collapse show"
-                            aria-labelledby="headingOne"
-                            data-bs-parent="#accordionExample"
-                        >
-                            <div class="accordion-body">
-                                {{ mocktail.detail }}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button
-                                class="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwo"
-                                aria-expanded="false"
-                                aria-controls="collapseTwo"
-                            >
-                                Ingrédient(s)
-                            </button>
-                        </h2>
-                        <div
-                            id="collapseTwo"
-                            class="accordion-collapse collapse"
-                            aria-labelledby="headingTwo"
-                            data-bs-parent="#accordionExample"
-                        >
-                            <div class="accordion-body"></div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button
-                                class="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapseThree"
-                                aria-expanded="false"
-                                aria-controls="collapseThree"
-                            >
-                                Conseils de dégustation
-                            </button>
-                        </h2>
-                        <div
-                            id="collapseThree"
-                            class="accordion-collapse collapse"
-                            aria-labelledby="headingThree"
-                            data-bs-parent="#accordionExample"
-                        >
-                            <div class="accordion-body">
-                                Servir 30 cl de mocktail dans un verre de style
-                                old fashioned préalablement rempli de glace.
-                                Déposer une demi-tranche de citron frais ou
-                                déshydratée à la surface. Déguster !
-                            </div>
-                        </div>
+<main>
+    <article class="mocktail-details section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h1>{{ mocktail.name }}</h1>
+                        <h2>Details about {{ mocktail.name }}</h2>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </article>
+    <section class="featured section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="left-image">
+                        <img
+                            src="{{ mocktail.imageUrl }}"
+                            alt="{{ mocktail.name }}"
+                        />
+                    </div>
+                </div>
+                <aside class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="info-table">
+                        <ul>
+                            <li>
+                                <article>
+                                    <span
+                                        >Description:
+                                        {{ mocktail.description }}</span
+                                    >
+                                </article>
+                                <article>
+                                    <span
+                                        >Ingredients:
+                                        {{ mocktail.ingredients }}</span
+                                    >
+                                </article>
+                                <article>
+                                    <span
+                                        >Preparation:
+                                        {{ mocktail.preparation }}</span
+                                    >
+                                </article>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+</main>
 {% endblock %}
