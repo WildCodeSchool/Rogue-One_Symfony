@@ -33,7 +33,8 @@ Encore
      */
     .addEntry('app', './assets/app.js')
     .addStyleEntry('styles', './assets/styles/styles.css')
-    .addStyleEntry('footer', './assets/styles/components/navbar.css')
+    .addStyleEntry('footer', './assets/styles/components/footer.css')
+    .addStyleEntry('navbar', './assets/styles/components/navbar.css')
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')
