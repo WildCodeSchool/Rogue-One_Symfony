@@ -6,6 +6,10 @@
   border-bottom: 1px solid #eee;
 }
 
+.sub-header a:hover {
+  color: var(--white-color);
+}
+
 .sub-header a {
   color: #fff;
   text-decoration: none;
