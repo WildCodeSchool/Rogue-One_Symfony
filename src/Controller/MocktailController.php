@@ -12,7 +12,7 @@ class MocktailController extends AbstractController
     #[Route('/', name: 'index')]
     public function index(): Response
     {
-        return $this->render('index.html.twig', [
+        return $this->render('mocktail/index.html.twig', [
             'pageName' => "Nos Mocktails",
         ]);
     }
@@ -20,6 +20,6 @@ class MocktailController extends AbstractController
     #[Route('/show', name: 'show')]
     public function show(): Response
     {
-        return $this->render('show.html.twig');
+        return $this->render('mocktail/show.html.twig');
     }
 }
