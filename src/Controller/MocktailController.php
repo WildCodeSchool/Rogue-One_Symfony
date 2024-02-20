@@ -6,7 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/mocktail', name: 'app_mocktail')]
+#[Route('/mocktail', name: 'app_mocktail_')]
 class MocktailController extends AbstractController
 {
     #[Route('/', name: 'index')]
