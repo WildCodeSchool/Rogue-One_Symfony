@@ -237,6 +237,7 @@
 .mocktails .item:hover h1 {
     color: var(--white-color);
 }
+
 .mocktails-filter button.active,
 .mocktails-filter button:hover {
     background-image: var(--gradient);
@@ -302,4 +303,3 @@ Responsive Style
         justify-content: center;
         width: 100%;
     }
-}
