@@ -189,10 +189,9 @@
     color: var(--black-color);
 }
 
-.header-area .main-nav .nav li a.active {
+.header-area .main-nav .nav li a.active{
     color: var(--black-color);
 }
-
 .header-area .main-nav .nav li a.active::after,
 .header-area .main-nav .nav li a:hover::after {
     content: "";
