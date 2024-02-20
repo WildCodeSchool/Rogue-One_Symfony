@@ -237,7 +237,8 @@
 .mocktails .item:hover h1 {
     color: var(--white-color);
 }
-.mocktails-filter button.active,.mocktails-filter button:hover {
+.mocktails-filter button.active,
+.mocktails-filter button:hover {
     background-image: var(--gradient);
     color: var(--white-color);
     border-radius: 10px;
@@ -251,75 +252,38 @@ Responsive Style
 --------------------------------------------- 
 */
 @media screen and (max-width: 450px) {
-    .contact-page #contact-form {
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 10px;
-        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
-        padding: 35px 30px;
-        background-color: #fff;
-        max-width: 90%;
-
-    }
-
-    .contact-page #contact-form label {
-        font-size: 15px;
-        color: #3a3a3a;
-        margin-bottom: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-
-    }
-
-    .contact-page #contact-form button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-
-    }
-
     .mocktails .item {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
-
     }
 
     .mocktails .item span {
         display: none;
-
     }
 
     .mocktails .mocktails-items {
         flex: 0 0 calc(50% - 20px);
-
     }
 
     .mocktails .details {
         flex-direction: column;
         align-items: flex-start;
-
     }
 
     .mocktails .name,
     .mocktails .price {
         width: 100%;
-
     }
-    
+
     .mocktails ul.mocktails-filter li a {
         font-size: 14px;
         padding: 10px 15px;
-        
     }
 
     .mocktails ul.mocktails-filter li {
         margin: 5px;
-
     }
 
     .mocktails .item h1 {
@@ -328,10 +292,9 @@ Responsive Style
         align-items: center;
         justify-content: center;
         width: 100%;
-
     }
 
-    .mocktails .item span.category{
+    .mocktails .item span.category {
         text-align: center;
         margin-bottom: 15px;
         display: flex;
