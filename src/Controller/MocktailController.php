@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Routing\Annotation\Route;
 
 #[Route('/mocktail', name: 'app_mocktail')]
 class MocktailController extends AbstractController
@@ -15,7 +15,8 @@ class MocktailController extends AbstractController
         return $this->render('index.html.twig', [
             'pageName' => "Nos Mocktails",
         ]);
-  
+    }
+
     #[Route('/show', name: 'show')]
     public function show(): Response
     {
