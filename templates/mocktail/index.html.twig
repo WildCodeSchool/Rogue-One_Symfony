@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %} {% block title %} {{ parent() }}
+{{ pageName }} {% endblock %} {% block stylesheet %}
+<link rel="stylesheet" href="assets/styles/pages/mocktails.css" />
+{% endblock %} {% block javascript %}
+<script src="assets/js/mocktailsFilter.js"></script>
+{% endblock %} {% block content %}
+<main>
+    <article class="section mocktails">
+        <section class="container">
+            <ul class="mocktails-filter" id="categories">
+                <li>
+                    <button class="btn filter-button active" data-filter="all">
+                        All
+                    </button>
+                </li>
+                {% for category in categories %}
+                <li>
+                    <button
+                        class="btn filter-button"
+                        data-filter="{{ category['id'] }}"
+                    >
+                        {{ category["name"] }}
+                    </button>
+                </li>
+                {% endfor %}
+            </ul>
+            <ul class="row mocktails-box">
+                {% for mocktail in mocktails %}
+                <li
+                    class="col-lg-3 col-md-6 col-sm-6 align-self-center mb-30 properties-items col-md-6"
+                    data-tag="{{ mocktail['category_id'] }}"
+                >
+                    <div
+                        class="item text-center"
+                        data-product-name="{{ mocktail.name }}"
+                    >
+                        <a
+                            href="mocktaildetail?id={{
+                                mocktail.id | url_encode
+                            }}"
+                        >
+                            <img
+                                src="{{ 'assets/images/mocktails/' ~ mocktail.image }}"
+                                alt="{{ mocktail.name }}"
+                            />
+                        </a>
+                        <span class="category">{{
+                            mocktail.category["name"]
+                        }}</span>
+                        <h1>{{ mocktail.name }}</h1>
+                        <hr />
+                        <span
+                            >{{ mocktail.detail | slice(0, 100) ~ '...' }}</span
+                        >
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+            <aside class="row">
+                <div class="col-lg-12">
+                    <ul class="pagination">
+                        {% for i in 1..pagesNumber %} {% if page != i %}
+                        <li>
+                            <a class="is_active" href="?page={{ i }}">{{
+                                i
+                            }}</a>
+                        </li>
+                        {% else %}
+                        <li>
+                            <a href="#" class="disabled">{{ i }}</a>
+                        </li>
+                        {% endif %} {% endfor %}
+                    </ul>
+                </div>
+            </aside>
+        </section>
+    </article>
+</main>
+{% endblock %}
