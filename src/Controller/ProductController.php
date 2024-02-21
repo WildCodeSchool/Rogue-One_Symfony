@@ -4,14 +4,15 @@ namespace App\Controller;
 
 use App\Entity\Category;
 use App\Entity\Product;
+use App\Repository\ProductRepository;
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-#[Route('/mocktail', name: 'app_mocktail_')]
-class MocktailController extends AbstractController
+#[Route('/product', name: 'app_product_')]
+class ProductController extends AbstractController
 {
     private EntityManagerInterface $entityManager;
 
@@ -24,26 +25,20 @@ class MocktailController extends AbstractController
     public function index(Request $request): Response
     {
         $categories = $this->entityManager->getRepository(Category::class)->findAll();
-        $mocktails = $this->entityManager->getRepository(Product::class)->findAll();
+        $products = $this->entityManager->getRepository(Product::class)->findAll();
 
-        $mocktailsPerPage = 10;
-        $totalMocktails = count($mocktails);
-        $pagesNumber = ceil($totalMocktails / $mocktailsPerPage);
+        $productsPerPage = 10;
+        $totalproducts = count($products);
+        $pagesNumber = ceil($totalproducts / $productsPerPage);
 
         $page = $request->query->getInt('page', 1);
 
-        return $this->render('mocktail/index.html.twig', [
+        return $this->render('product/index.html.twig', [
             'pageName' => "Nos Mocktails",
             'categories' => $categories,
-            'mocktails' => $mocktails,
+            'products' => $products,
             'pagesNumber' => $pagesNumber,
             'currentPage' => $page,
         ]);
-    }
-
-    #[Route('/show', name: 'show')]
-    public function show(): Response
-    {
-        return $this->render('mocktail/show.html.twig');
     }
 }

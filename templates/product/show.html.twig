@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %} {% block title %}
+{{ parent() }}
+{{ product.name }} - Mocktail Details {% endblock %} {% block stylesheet %}
+<link rel="stylesheet" href="assets/styles/pages/mocktail-show.css" />
+{% endblock %} {% block content %}
+<article class="mocktail-details-section">
+    <div class="container">
+        <section class="mocktail-details section">
+            <div class="section-heading">
+                <a href="{{ path('app_product_index') }}"> Retour</a>/{{
+                    product.name
+                }}
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h1>{{ product.name }}</h1>
+                        <h2>Details about {{ product.name }}</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="featured section">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="left-image">
+                        <img
+                            src="{{ asset('build/images/mocktails/' ~ product.image) }}"
+                            alt="{{ product.name }}"
+                        />
+                    </div>
+                </div>
+                <aside class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="info-table">
+                        <h1>{{ product.name }}</h1>
+                        <span>Prix : {{ product.price }} €</span>
+                        <ul>
+                            <li>
+                                <section>
+                                    <span
+                                        >Description: {{ product.detail }}</span
+                                    >
+                                </section>
+
+                                {#
+                                <section>
+                                    <span
+                                        >Ingredients:
+                                        {{ product.ingredient }}</span
+                                    >
+                                </section>
+                                <section>
+                                    <span
+                                        >Preparation:
+                                        {{ product.preparation }}</span
+                                    >
+                                </section>
+                                #}
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </div>
+</article>
+{% endblock %}
