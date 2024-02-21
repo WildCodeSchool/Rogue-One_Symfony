@@ -10,7 +10,7 @@ class MemberFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
-        // Créer et ajouter des membres
+    
         $member1 = new Member();
         $member1->setFirstname('Chouiab');
         $member1->setLastname('JANAH');
@@ -29,7 +29,6 @@ class MemberFixtures extends Fixture
         $member2->setDescription("");
         $manager->persist($member2);
 
-        // Enregistrer les modifications dans la base de données
         $manager->flush();
     }
 }

@@ -15,11 +15,11 @@ class MemberController extends AbstractController
     public function index(MemberRepository $memberRepository): Response // Inject MemberRepository
     {
         // Récupérer tous les membres
-        $member = $memberRepository->findAll(); // Use $memberRepository to fetch members
+        $members = $memberRepository->findAll(); // Use $memberRepository to fetch members
 
         return $this->render('member/index.html.twig', [
             'pageName' => "Notre équipe",
-            'member' => $member, // Pass $members to the template
+            'member' => $members, // Pass $members to the template
         ]);
     }
 }
