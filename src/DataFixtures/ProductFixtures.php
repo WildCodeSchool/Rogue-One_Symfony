@@ -58,7 +58,8 @@ class ProductFixtures extends Fixture implements DependentFixtureInterface
             $product->setPrice($productData['price']);
             $product->setDetail($productData['detail']);
             $product->setImage($productData['image']);
-            $product->setCategory($this->getReference($productData['categoryReference']));
+            $categoryReference = $this->getReference('category_' . $productData['categoryReference']);
+            $product->setCategory($categoryReference);
             // $product->setCategory($productData['category']);
             $manager->persist($product);
             $this->addReference('product_' . $productData['name'], $product);
