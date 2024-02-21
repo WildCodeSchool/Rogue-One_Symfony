@@ -36,9 +36,9 @@
     </head>
     <body>
         {% block navbar %} {% include "partials/_navbar.html.twig" %} {%
-        endblock %} {% block content %}
-        <main></main>
-        {% endblock %} {% block footer %} {% include
-        "partials/_footer.html.twig" %} {% endblock %}
+        endblock %}
+        <main>{% block content %} {% endblock %}</main>
+        {% block footer %} {% include "partials/_footer.html.twig" %} {%
+        endblock %}
     </body>
 </html>
