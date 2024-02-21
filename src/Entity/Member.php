@@ -2,12 +2,12 @@
 
 namespace App\Entity;
 
-use App\Repository\MembersRepository;
+use App\Repository\MemberRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: MembersRepository::class)]
-class Members
+#[ORM\Entity(repositoryClass: MemberRepository::class)]
+class Member
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -20,7 +20,7 @@ class Members
     #[ORM\Column(length: 25)]
     private ?string $lastname = null;
 
-    #[ORM\Column(length: 50)]
+    #[ORM\Column(length: 25)]
     private ?string $role = null;
 
     #[ORM\Column(length: 255)]

@@ -19,19 +19,19 @@
 		</div>
 		<div class="container overflow-hidden">
 			<div class="row ">
-				{% for member in members %}
+				{% for members in member %}
 					<div class="col-lg-12 col-md-4">
 						<div class="card-box text-center">
 							<div class="user-pic">
-								<img src=" {{member.IMG}}" class="img-fluid" alt="User Pic">
+								<img src=" {{members.IMG}}" class="img-fluid" alt="User Pic">
 							</div>
-							<h1>{{ member.FIRSTNAME}}</h1>
-							<h2>{{ member.LASTNAME}}</h2>
-							<span>{{ member.ROLE}}</span>
+							<h1>{{ members.FIRSTNAME}}</h1>
+							<h2>{{ members.LASTNAME}}</h2>
+							<span>{{ members.ROLE}}</span>
 							<hr>
-							<p>{{member.DESCRIPTION}}</p>
+							<p>{{members.DESCRIPTION}}</p>
 							<hr>
-							<a href="{{member.LINK}}" target="_blank" class="btn">Voir LinkedIn</a>
+							<a href="{{members.LINK}}" target="_blank" class="btn">Voir LinkedIn</a>
 						</div>
 					</div>
 				{% endfor %}
