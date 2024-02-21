@@ -11,7 +11,7 @@ class ProductFixtures extends Fixture implements DependentFixtureInterface
 {
     public function load(ObjectManager $manager): void
     {
-        $product = [
+        $products = [
             ["name" => "WARA'TAIL", "price" => 10.00, "detail" =>
             "Boisson énergisante à l'Awara...", "image" => "waraTail.png",
             "categoryReference" => "Energisants Naturels"],
@@ -52,7 +52,7 @@ class ProductFixtures extends Fixture implements DependentFixtureInterface
             "Boisson débordante de fraîcheur avec sa Mangue verte...", "image" =>
             "yanaStart.png", "categoryReference" => "Fruits d'excellences"],
         ];
-        foreach ($product as $productData) {
+        foreach ($products as $productData) {
             $product = new Product();
             $product->setName($productData['name']);
             $product->setPrice($productData['price']);
