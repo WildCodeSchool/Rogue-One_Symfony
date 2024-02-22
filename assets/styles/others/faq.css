@@ -1,0 +1,4 @@
+.accordion-button.selected {
+    background-color: #f0f0f0; /* couleur de fond personnalisée */
+    color: #333; /* couleur du texte personnalisée */
+}

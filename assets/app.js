@@ -8,6 +8,7 @@
 // any CSS you import will output into a single css file (app.css in this case)
 import "../assets/styles/components/navbar.css";
 import "../assets/styles/components/footer.css";
+import "../assets/styles/others/faq.css";
 import "../assets/styles/styles.css";
 
 // any JS you import will output into a single js file (app.js in this case)

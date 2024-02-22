@@ -3,9 +3,7 @@
 {% block title %}
 	{{ parent() }}
 {% endblock %}
-{% block stylesheet %}
-	<link rel="stylesheet" href="assets/css/mocktail_details.css"/>
-{% endblock %}
+
 {% block content %}
 	<div class="single-mocktail section">
 		<div class="container">
@@ -20,7 +18,7 @@
 										<strong>{{ faqs.question }}</strong>
 									</button>
 								</h2>
-								<div id="{{ faqs.collapse }}" class="accordion-collapse collapse show" aria-labelledby="{{ faqs.section }}" data-bs-parent="#accordionExample">
+								<div id="{{ faqs.collapse }}" class="accordion-collapse collapse" aria-labelledby="{{ faqs.section }}" data-bs-parent="#accordionExample">
 									<div class="accordion-body">{{ faqs.response }}</div>
 								</div>
 							</div>
@@ -31,3 +29,4 @@
 		</div>
 	</div>
 {% endblock %}
+
