@@ -46,8 +46,9 @@
                     data-product-name="{{ product.name }}"
                 >
                     <a
-                        href=
-
+                        href="{{
+                            path('app_product_show', { id: product.id })
+                        }}"
                     >
                         <img
                             src="{{ asset('build/images/mocktails/' ~ product.image) }}"

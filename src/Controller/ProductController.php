@@ -41,4 +41,12 @@ class ProductController extends AbstractController
             'currentPage' => $page,
         ]);
     }
+
+    #[Route('/{id}', name: 'show', requirements: ['id' => '\d+'])]
+    public function show(Product $product): Response
+    {
+        return $this->render('product/show.html.twig', [
+            'product' => $product,
+        ]);
+    }
 }
