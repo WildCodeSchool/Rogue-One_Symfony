@@ -12,7 +12,6 @@ import "../assets/styles/others/members.css";
 import "../assets/styles/styles.css";
 
 // any JS you import will output into a single js file (app.js in this case)
-import "../assets/js/navbar.js";
 import "../assets/js/active_navbar.js";
 
 // start the Stimulus application
