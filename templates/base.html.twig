@@ -11,7 +11,9 @@
             type="image/png"
             href="{{ asset('build/images/logo-wild-code-school.svg') }}"
         />
+
         <title>{% block title %}Mocktail Celeste | {{ pageName }}{% endblock %}</title>
+
         {% block stylesheets %}
         <link
             rel="stylesheet"
@@ -34,8 +36,10 @@
     <body>
         {% block navbar %} {% include "partials/_navbar.html.twig" %} {%
         endblock %}
+
         {% block heading %} {% include "partials/_heading.html.twig" %} {%
         endblock %}
+
         <main>{% block content %} {% endblock %}</main>
         {% block footer %} {% include "partials/_footer.html.twig" %} {%
         endblock %}
