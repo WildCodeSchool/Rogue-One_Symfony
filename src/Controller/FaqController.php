@@ -14,7 +14,8 @@ class FaqController extends AbstractController
     {
         $faq = $faqRepository->findAll();
 
-        return $this->render('faq/index.html.twig', [
+        return $this->render('faq/index.html.twig', 
+        ['pageName' => "FAQ",
             'faq' => $faq,
         ]);
     }

@@ -6,17 +6,6 @@
 {% block stylesheet %}
 	<link rel="stylesheet" href="assets/css/mocktail_details.css"/>
 {% endblock %}
-{% block header %}
-	<div class="page-heading header-text">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<h1></h1>
-				</div>
-			</div>
-		</div>
-	</div>
-{% endblock %}
 {% block content %}
 	<div class="single-mocktail section">
 		<div class="container">
@@ -27,7 +16,9 @@
 						{% for faqs in faq %}
 							<div class="accordion-item">
 								<h2 class="accordion-header" id="{{ faqs.section }}">
-									<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#{{ faqs.collapse }}" aria-expanded="true" aria-controls="{{ faqs.collapse }}"><strong>{{ faqs.question }}</strong></button>
+									<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#{{ faqs.collapse }}" aria-expanded="true" aria-controls="{{ faqs.collapse }}">
+										<strong>{{ faqs.question }}</strong>
+									</button>
 								</h2>
 								<div id="{{ faqs.collapse }}" class="accordion-collapse collapse show" aria-labelledby="{{ faqs.section }}" data-bs-parent="#accordionExample">
 									<div class="accordion-body">{{ faqs.response }}</div>
@@ -39,5 +30,4 @@
 			</div>
 		</div>
 	</div>
-    
 {% endblock %}
