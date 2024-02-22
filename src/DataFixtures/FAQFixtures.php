@@ -13,7 +13,8 @@ class FAQFixtures extends Fixture
         $faqsData = [
             [
                 'question' => 'Qu\'est-ce qu\'un mocktail ?',
-                'response' => 'Un mocktail est une boisson non alcoolisée qui est souvent composée de différents jus de fruits,
+                'response' => 'Un mocktail est une boisson non alcoolisée qui est
+                souvent composée de différents jus de fruits,
                  de sirops, d\'herbes aromatiques et d\'autres ingrédients 
                  pour créer une expérience gustative rafraîchissante et délicieuse.',
                 'section' => 'headingOne',
@@ -30,8 +31,9 @@ class FAQFixtures extends Fixture
             ],
             [
                 'question' => 'Quels sont les avantages des mocktails par rapport aux cocktails alcoolisés ?',
-                'response' => 'Les mocktails offrent une alternative plus saine, 
-                sans risque d\'ivresse, sont souvent plus abordables et peuvent être appréciés par un public plus large, 
+                'response' => 'Les mocktails offrent une alternative plus saine,
+                sans risque d\'ivresse, sont souvent plus abordables 
+                et peuvent être appréciés par un public plus large, 
                 y compris les enfants et les personnes qui ne boivent pas d\'alcool.',
                 'section' => 'headingThree',
                 'collapse' => 'collapseThree'
