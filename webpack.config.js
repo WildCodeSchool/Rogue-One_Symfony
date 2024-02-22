@@ -32,10 +32,20 @@ Encore
    * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
    */
   .addEntry("app", "./assets/app.js")
+  .addEntry("active_navbar", "./assets/js/active_navbar.js")
+  .addEntry("mocktailFilter", "./assets/js/mocktailFilter.js")
+
   .addStyleEntry("styles", "./assets/styles/styles.css")
   .addStyleEntry("footer", "./assets/styles/components/footer.css")
   .addStyleEntry("navbar", "./assets/styles/components/navbar.css")
-
+  .addStyleEntry("headind-page", "./assets/styles/components/heading-page.css")
+  .addStyleEntry("banner", "./assets/styles/components/banner.css")
+  .addStyleEntry("member", "./assets/styles/others/members.css")
+  .addStyleEntry("home", "./assets/styles/pages/home.css")
+  .addStyleEntry("contact", "./assets/styles/pages/contact.css")
+  .addStyleEntry("about", "./assets/styles/pages/about.css")
+  .addStyleEntry("mocktail_show", "./assets/styles/pages/mocktail_show.css")
+  
   // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
   .enableStimulusBridge("./assets/controllers.json")
 

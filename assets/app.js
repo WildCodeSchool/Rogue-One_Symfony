@@ -8,11 +8,20 @@
 // any CSS you import will output into a single css file (app.css in this case)
 import "../assets/styles/components/navbar.css";
 import "../assets/styles/components/footer.css";
+import "../assets/styles/components/heading-page.css";
+import "../assets/styles/components/banner.css";
+import "../assets/styles/others/members.css";
+import "../assets/styles/pages/about.css";
+import "../assets/styles/pages/contact.css";
+import "../assets/styles/pages/home.css";
+import "../assets/styles/pages/mocktail_show.css";
+import "../assets/styles/pages/mocktail.css";
 import "../assets/styles/styles.css";
 
 // any JS you import will output into a single js file (app.js in this case)
 import "../assets/js/navbar.js";
 import "../assets/js/active_navbar.js";
+import "../assets/js/mocktailFilter.js";
 
 // start the Stimulus application
 
