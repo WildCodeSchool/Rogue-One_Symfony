@@ -12,14 +12,12 @@ use Symfony\Component\Routing\Annotation\Route;
 class MemberController extends AbstractController
 {
     #[Route('/member', name: 'app_member')]
-    public function index(MemberRepository $memberRepository): Response // Inject MemberRepository
+    public function index(MemberRepository $memberRepository): Response
     {
-        // Récupérer tous les membres
-        $members = $memberRepository->findAll(); // Use $memberRepository to fetch members
-
+        $member = $memberRepository->findAll();
         return $this->render('member/index.html.twig', [
             'pageName' => "Notre équipe",
-            'member' => $members, // Pass $members to the template
+            'members' => $member,
         ]);
     }
 }

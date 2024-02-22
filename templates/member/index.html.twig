@@ -3,9 +3,6 @@
 	{{ parent() }}
 	{{ pageName }}
 {% endblock %}
-{% block stylesheet %}
-	<link rel="stylesheet" href="assets/css/members.css"/>
-{% endblock %}
 {% block content %}
 	<section class="py-3 py-md-5 py-xl-8">
 		<div class="container">
@@ -19,22 +16,23 @@
 		</div>
 		<div class="container overflow-hidden">
 			<div class="row ">
-				{% for members in member %}
+				{% for member in members %}
 					<div class="col-lg-12 col-md-4">
 						<div class="card-box text-center">
 							<div class="user-pic">
-								<img src=" {{members.IMG}}" class="img-fluid" alt="User Pic">
+								<img src=" ../assets/images/team/{{member.IMG}}" class="img-fluid" alt="User Pic">
 							</div>
-							<h1>{{ members.FIRSTNAME}}</h1>
-							<h2>{{ members.LASTNAME}}</h2>
-							<span>{{ members.ROLE}}</span>
+							<h1>{{ member.FIRSTNAME}}</h1>
+							<h2>{{ member.LASTNAME}}</h2>
+							<span>{{ member.ROLE}}</span>
 							<hr>
-							<p>{{members.DESCRIPTION}}</p>
+							<p>{{member.DESCRIPTION}}</p>
 							<hr>
-							<a href="{{members.LINK}}" target="_blank" class="btn">Voir LinkedIn</a>
+							<a href="{{member.LINK}}" target="_blank" class="btn">Voir LinkedIn</a>
 						</div>
 					</div>
 				{% endfor %}
+				{# {{ dump (members)}} #}
 			</div>
 		</div>
 	</section>
