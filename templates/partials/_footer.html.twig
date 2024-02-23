@@ -1,8 +1,8 @@
-<footer class="text-center text-lg-start mt-xl-5 pt-4">
+<footer class="text-center text-lg-start mt-xl-5 pt-4 ">
 	<nav class="container p-4">
 		<div class="row">
 			<ul class="row">
-				<div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+				<div class="col-lg-3 col-md-6 mb-4 mb-lg-0 col-sm-12 ">
 					<h2 class="text-uppercase mb-4">Informations</h2>
 					<ul class="list-unstyled mb-4">
 						<li>
@@ -34,7 +34,9 @@
 						<a href="{{ path('app_member') }}" class="text-white">Notre équipe Dev</a>
 					</li>
 					<li>
-						<a href="{{ path('app_contact') }}" class="text-white">FAQ</a>
+
+						<a href="{{ path('app_faq')}}" class="text-white">FAQ</a>
+
 					</li>
 					<li>
 						<a href="{{ path('app_contact') }}" class="text-white">Plan de Site</a>
@@ -59,10 +61,11 @@
 				</div>
 				<button type="submit" class="btn">Souscrire</button>
 			</div>
+
 		</ul>
 	</div>
 </nav>
-<div class="text-center p-3 border-top border-white">
+<div class="text-center p-12 border-top border-white">
 	© 2024 Copyright:
 	<a href="{{ path('app_admin') }}" target="_blank">Rogue One</a>
 </div></footer>
