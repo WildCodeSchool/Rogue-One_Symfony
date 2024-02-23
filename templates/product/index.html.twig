@@ -1,6 +1,10 @@
 {% extends 'base.html.twig' %} {% block title %} {{ parent() }}
-{{ pageName }} {% endblock %} {% block javascript %}
-<script src="assets/js/mocktailFilter.js"></script>
+{{ pageName }} {% endblock %} {% block stylesheets %}
+{{ parent() }}
+{{ encore_entry_link_tags("mocktailEntry_index") }}
+{% endblock %} {% block javascripts %}
+{{ parent() }}
+{{ encore_entry_script_tags("mocktailEntry_index") }}
 {% endblock %} {% block content %}
 <div class="apropos-page section">
     <div class="container">

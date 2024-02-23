@@ -1,6 +1,9 @@
 {% extends 'base.html.twig' %} {% block title %}
 {{ parent() }}
-{{ product.name }} - Mocktail Details {% endblock %} {% block content %}
+{{ product.name }} - Mocktail Details {% endblock %} {% block stylesheets %}
+{{ parent() }}
+{{ encore_entry_link_tags("mocktailEntry_show") }}
+{% endblock %} {% block content %}
 <article class="mocktail-details-section">
     <div class="container">
         <section class="mocktail-details section">
