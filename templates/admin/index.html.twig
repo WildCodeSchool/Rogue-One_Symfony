@@ -14,17 +14,13 @@
 />
 {{ encore_entry_link_tags("adminEntry") }}
 {% endblock %}
-<a href="list_categories">
+<a href="{{ path('app_admin_category_index') }}">
     <i class="fa-solid fa-list"></i>
     Categories</a
 >
-<a href="list_mocktails">
+<a href="{{ path('app_admin_product_index') }}">
     <i class="fa-solid fa-list"></i>
     Mocktails</a
->
-<a href="list_commentaries" disabled>
-    <i class="fa-solid fa-list"></i>
-    Messages</a
 >
 <div>
     <a href="{{ path('app_home') }}" class="btn btn-success">

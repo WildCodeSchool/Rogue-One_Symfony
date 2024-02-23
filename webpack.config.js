@@ -31,6 +31,7 @@ Encore
    * Each entry will result in one JavaScript file (e.g. app.js)
    * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
    */
+
   .addEntry("appEntry", "./assets/app.js")
   .addEntry("homeEntry", "./assets/home.js")
   .addEntry("mocktailEntry_index", "./assets/mocktail_index.js")
@@ -38,6 +39,10 @@ Encore
   .addEntry("contactEntry", "./assets/contact.js")
   .addEntry("about-usEntry", "./assets/about-us.js")
   .addEntry("adminEntry", "./assets/admin.js")
+
+  .addStyleEntry("faq", "./assets/styles/others/faq.css")
+  .addStyleEntry("members", "./assets/styles/others/members.css")
+
 
   // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
   .enableStimulusBridge("./assets/controllers.json")
