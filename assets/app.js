@@ -6,6 +6,8 @@
  */
 
 // any CSS you import will output into a single css file (app.css in this case)
+import "../assets/styles/components/global.css";
+import "../assets/styles/components/banner.css";
 import "../assets/styles/components/navbar.css";
 import "../assets/styles/components/footer.css";
 import "../assets/styles/others/faq.css";
@@ -18,4 +20,4 @@ import "../assets/js/footer.js";
 
 // start the Stimulus application
 
-import "./bootstrap";
+import "./bootstrap.js";

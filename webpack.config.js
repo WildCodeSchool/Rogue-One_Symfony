@@ -31,11 +31,15 @@ Encore
    * Each entry will result in one JavaScript file (e.g. app.js)
    * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
    */
-  .addEntry("app", "./assets/app.js")
 
-  .addStyleEntry("styles", "./assets/styles/styles.css")
-  .addStyleEntry("footer", "./assets/styles/components/footer.css")
-  .addStyleEntry("navbar", "./assets/styles/components/navbar.css")
+  .addEntry("appEntry", "./assets/app.js")
+  .addEntry("homeEntry", "./assets/home.js")
+  .addEntry("mocktailEntry_index", "./assets/mocktail_index.js")
+  .addEntry("mocktailEntry_show", "./assets/mocktail_show.js")
+  .addEntry("contactEntry", "./assets/contact.js")
+  .addEntry("about-usEntry", "./assets/about-us.js")
+  .addEntry("adminEntry", "./assets/admin.js")
+
   .addStyleEntry("faq", "./assets/styles/others/faq.css")
   .addStyleEntry("members", "./assets/styles/others/members.css")
 
