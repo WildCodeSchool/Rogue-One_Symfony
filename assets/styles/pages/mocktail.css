@@ -1,0 +1,306 @@
+.mocktails .item {
+    background-color: #fafafa;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.mocktails .item:hover {
+    background-image: var(--gradient);
+    color: var(--white-color);
+    border: 1.5px solid var(--white-color);
+}
+
+.mocktails .item img {
+    border-radius: 10px;
+}
+
+.mocktails .item span.category {
+    background-color: #fbd9cf;
+    font-weight: 500;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #1e1e1e;
+    padding: 5px 12px;
+    display: inline-block;
+    margin-top: 25px;
+}
+
+.mocktails .item h1 {
+    font-size: 19px;
+    margin: 25px 0px;
+}
+
+.mocktails .item h1 a {
+    color: #1e1e1e;
+}
+
+.mocktails .item ul li {
+    display: inline-block;
+    font-size: 15px;
+    color: #4a4a4a;
+    margin-right: 20px;
+}
+
+.mocktails .item ul li span {
+    font-weight: 600;
+    color: #1e1e1e;
+}
+
+.mocktails .item ul {
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+.mocktails .item h6 {
+    font-size: 20px;
+    color: #f35525;
+    margin-top: 6px;
+    display: inline-block;
+    float: right;
+    margin-top: 30px;
+}
+
+.mocktails .item .main-button {
+    text-align: center;
+}
+
+.mocktails .main-button a {
+    color: #fff;
+}
+
+.mocktails .row.mocktails-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mocktails .mocktails-items {
+    flex: 0 0 calc(25% - 50px);
+    display: flex;
+    justify-content: center;
+}
+
+.mocktails .details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.mocktails .item span.category {
+    background-image: var(--gradient);
+    color: var(--white-color);
+    font-weight: 500;
+    border-radius: 5px;
+    font-size: 25px;
+    color: #1e1e1e;
+    padding: 5px 12px;
+    display: inline-block;
+    margin-top: 25px;
+}
+
+.mocktails .item h6 {
+    font-size: 20px;
+    color: #1e1e1e;
+    margin-top: 6px;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.mocktails .name,
+.mocktails .price {
+    flex: 1;
+}
+
+.mocktails .name h1 {
+    margin: 0;
+}
+
+.mocktails .price h6 {
+    margin: 0;
+    float: inline-end;
+}
+
+.main-button {
+    display: inline-block;
+    background-color: #1e1e1e;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 30px;
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+
+.mocktails .main-button {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.mocktails ul.mocktails-filter {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.mocktails ul.mocktails-filter li {
+    display: inline-block;
+    margin: 5px 8px;
+}
+
+.mocktails ul.mocktails-filter li a {
+    display: inline-block;
+    text-align: center;
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: #fff;
+    background-color: black;
+    padding: 12px 25px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.mocktails ul.mocktails-filter li a:hover {
+    background-image: var(--gradient);
+    transition: all 0.3s;
+}
+
+.mocktails ul.mocktails-filter li a.is_active {
+    background-image: var(--gradient);
+    color: #fff;
+}
+
+.mocktails ul.pagination {
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+}
+
+.mocktails ul.pagination li {
+    display: inline-block;
+    margin: 0px 5px;
+}
+
+.mocktails ul.pagination li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #1e1e1e;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.mocktails ul.pagination li a:hover,
+.mocktails ul.pagination li a.is_active {
+    background: var(--gradient);
+    color: #fff;
+}
+
+/* Zoom des mocktails */
+.mocktails .item img {
+    transition: 0.3s;
+}
+
+.mocktails .item:hover {
+    box-shadow: 0px 0px 50px 0px rgba(31, 69, 113, 0.5);
+    -webkit-box-shadow: 0 0px 30px 0 rgba(31, 69, 113, 0.2);
+}
+
+.mocktails .item img {
+    overflow: hidden;
+}
+
+.mocktails .item img {
+    transition: all 1.5s ease;
+}
+
+.mocktails .item:hover img {
+    transform: scale(1.1);
+}
+
+.mocktails .item:hover {
+    background-image: var(--gradient);
+    color: var(--white-color);
+    border: 2px solid var(--white-color);
+}
+
+.mocktails .item:hover h1 {
+    color: var(--white-color);
+}
+
+.mocktails-filter button.active,
+.mocktails-filter button:hover {
+    background-image: var(--gradient);
+    color: var(--white-color);
+    border-radius: 10px;
+    height: auto;
+    border: none;
+}
+
+/* 
+---------------------------------------------
+Responsive Style
+--------------------------------------------- 
+*/
+@media screen and (max-width: 450px) {
+    .mocktails .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .mocktails .item span {
+        display: none;
+    }
+
+    .mocktails .mocktails-items {
+        flex: 0 0 calc(50% - 20px);
+    }
+
+    .mocktails .details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .mocktails .name,
+    .mocktails .price {
+        width: 100%;
+    }
+
+    .mocktails ul.mocktails-filter li a {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .mocktails ul.mocktails-filter li {
+        margin: 5px;
+    }
+
+    .mocktails .item h1 {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .mocktails .item span.category {
+        text-align: center;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+}
