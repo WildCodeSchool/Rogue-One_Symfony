@@ -45,7 +45,10 @@ Encore
   .addStyleEntry("contact", "./assets/styles/pages/contact.css")
   .addStyleEntry("about", "./assets/styles/pages/about.css")
   .addStyleEntry("mocktail_show", "./assets/styles/pages/mocktail_show.css")
-  
+  .addStyleEntry("faq", "./assets/styles/others/faq.css")
+  .addStyleEntry("members", "./assets/styles/others/members.css")
+
+
   // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
   .enableStimulusBridge("./assets/controllers.json")
 
