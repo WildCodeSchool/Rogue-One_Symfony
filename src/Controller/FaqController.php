@@ -13,6 +13,9 @@ class FaqController extends AbstractController
     public function index(FaqRepository $faqRepository): Response
     {
         $faq = $faqRepository->findAll();
-        return $this->render('faq/index.html.twig', ['pageName' => "FAQ", 'faq' => $faq,]);
+        return $this->render('faq/index.html.twig', ['pageName' => "Foire Aux Questions",
+        'pageDescription' => "Nos Mocktails",
+        'banner' => "faq",
+        'faq' => $faq,]);
     }
 }
