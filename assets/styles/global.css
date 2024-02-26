@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&display=swap');
+
+/* Colors */
+:root {
+    --primary-color: #08AEEA;
+    --secondary-color: #2AF598;
+    --tertiary-color: #B4E6F8;
+    --quaternary-color: #EA4408;
+    --white-color: #f5f5f5;
+    --black-color: #000000;
+    --gradient: radial-gradient(circle farthest-corner at 10% 20%, var(--primary-color) 0%, var(--secondary-color) 90%);
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cuprum", sans-serif;
+    background-color: var(--white-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #1e1e1e;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+p {
+    font-size: 14px;
+    line-height: 28px;
+    color: #4a4a4a;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Selection */
+::selection {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+::-moz-selection {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+/* Section Styles */
+.section {
+    margin-top: 120px;
+}
+
+.section-heading {
+    margin-bottom: 70px;
+}
+
+.section-heading h2 {
+    font-size: 40px;
+    margin-top: 20px;
+    line-height: 56px;
+}
+
+.section-heading h1 {
+    background: var(--gradient);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* Button Styles */
+.main-button,
+.icon-button a {
+    display: inline-block;
+    color: #fff;
+    background-color: #1e1e1e;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 30px;
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+
+.icon-button a i {
+    background-color: var(--primary-color);
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 50px;
+    display: inline-block;
+    margin-right: 15px;
+    margin-left: -1px;
+}
+
+/* Thumbnail */
+.img-thumbnail {
+    width: 50%;
+    overflow: hidden;
+}
+
+/* Responsive Styles */
+@media (max-width: 430px) {
+    .section-heading h1,
+    .section-heading h2 {
+        text-align: center;
+    }
+}
