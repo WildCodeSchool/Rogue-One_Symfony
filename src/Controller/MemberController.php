@@ -17,7 +17,7 @@ class MemberController extends AbstractController
         $member = $memberRepository->findAll();
         return $this->render('member/index.html.twig', [
             'pageName' => "Notre équipe",
-            'pageDescription' => "Nos Mocktails",
+            'pageDescription' => "member",
             'banner' => "member",
             'members' => $member,
         ]);
