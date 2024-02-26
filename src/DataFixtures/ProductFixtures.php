@@ -7,6 +7,10 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
 
+/**
+ * This will suppress all the PMD warnings in this class.
+ ** @SuppressWarnings(PHPMD)
+ **/
 class ProductFixtures extends Fixture implements DependentFixtureInterface
 {
     public function load(ObjectManager $manager): void
@@ -15,19 +19,19 @@ class ProductFixtures extends Fixture implements DependentFixtureInterface
             [
                 "name" => "WARA'TAIL", "price" => 10.00, "detail" =>
                 "Boisson énergisante à l'Awara de BIO STRATÈGE (poudre concentrée),
-            au Maracudja (Fruit de la Passion) et à la Mandarine. 
-            Sa belle couleur naturelle est grâce aux fruits qui la composent. 
-            Son goût est très original et bien fruité.",
+                au Maracudja (Fruit de la Passion) et à la Mandarine. 
+                Sa belle couleur naturelle est grâce aux fruits qui la composent. 
+                Son goût est très original et bien fruité.",
                 "image" => "waraTail.png",
                 "categoryReference" => "Energisants Naturels"
             ],
             [
                 "name" => "WASSAÏ'TAIL", "price" => 10.50, "detail" =>
                 "Boisson énergisante au Wassaï de BIO STRATÈGE (poudre concentrée)
-             et à la Pitaya (Fruit du dragon) et au piment fort. 
-             Sa belle couleur naturelle est due aux fruits que contient ce Mocktail. 
-             Son goût est très original, fait penser au raisin 
-             et le piment chien sublime cette boisson.",
+                et à la Pitaya (Fruit du dragon) et au piment fort. 
+                Sa belle couleur naturelle est due aux fruits que contient ce Mocktail. 
+                Son goût est très original, fait penser au raisin 
+                et le piment chien sublime cette boisson.",
                 "image" => "wassaiTail.png",
                 "categoryReference" => "Energisants Naturels"
             ],
@@ -88,12 +92,12 @@ class ProductFixtures extends Fixture implements DependentFixtureInterface
             ],
             [
                 "name" => "SOLOJAH", "price" => 10.25, "detail" =>
-                "Boisson débordant de 'peps' : à la fois frais et acidulé avec son maracudja. 
-            Sa belle couleur est due à la Papaye Solo et au Maracudja (Fruit de la Passion). 
-            Son goût est très fruité et doux avec la Papaye qui apporte de la rondeur : 
-            il nous fait drôlement penser à du planteur.",
-                "image" =>
-                "solojah.png", "categoryReference" => "Fruits Locaux Epices"
+                "Boisson débordant de 'peps' : à la fois frais et acidulé avec son maracudja.
+                Sa belle couleur est due à la Papaye Solo et au Maracudja (Fruit de la Passion). 
+                Son goût est très fruité et doux avec la Papaye qui apporte de la rondeur : 
+                il nous fait drôlement penser à du planteur.",
+                "image" => "solojah.png",
+                "categoryReference" => "Fruits Locaux Epices"
             ],
             [
                 "name" => "PAPAYER PÉYI", "price" => 10.50, "detail" =>
