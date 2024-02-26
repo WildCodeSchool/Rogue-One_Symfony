@@ -11,7 +11,6 @@ use Doctrine\Persistence\ObjectManager;
  * This will suppress all the PMD warnings in this class.
  ** @SuppressWarnings(PHPMD)
  **/
-
 class ProductFixtures extends Fixture implements DependentFixtureInterface
 {
     public function load(ObjectManager $manager): void
