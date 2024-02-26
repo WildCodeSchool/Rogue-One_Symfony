@@ -32,6 +32,7 @@ Encore
    * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
    */
 
+  // JS Entry
   .addEntry("appEntry", "./assets/app.js")
   .addEntry("homeEntry", "./assets/home.js")
   .addEntry("mocktailEntry_index", "./assets/mocktail_index.js")
@@ -39,10 +40,23 @@ Encore
   .addEntry("contactEntry", "./assets/contact.js")
   .addEntry("about-usEntry", "./assets/about-us.js")
   .addEntry("adminEntry", "./assets/admin.js")
+  .addEntry("mocktailFilter", "./assets/js/mocktailFilter.js")
+  .addEntry("logonav", "./assets/js/logonav.js")
+  .addEntry("headingJs", "./assets/js/heading.js")
 
+  .addEntry("adminDashboardJs", "./assets/styles/admin/adminDashboard.js")
+
+  // CSS Entry
+  .addStyleEntry("header", "./assets/styles/components/header.css")
   .addStyleEntry("faq", "./assets/styles/others/faq.css")
-  .addStyleEntry("members", "./assets/styles/others/members.css")
 
+  .addStyleEntry("members", "./assets/styles/others/members.css")
+  .addStyleEntry("mocktailStyleEntry", "./assets/styles/pages/mocktail.css")
+  .addStyleEntry("contactStyleEntry", "./assets/styles/pages/contact.css")
+
+  .addStyleEntry("global", "./assets/styles/global.css")
+
+  .addStyleEntry("adminDashboardCss", "./assets/styles/admin/adminDashboard.css")
 
   // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
   .enableStimulusBridge("./assets/controllers.json")

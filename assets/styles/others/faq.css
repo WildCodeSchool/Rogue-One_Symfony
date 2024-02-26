@@ -1,4 +1,10 @@
-.accordion-button.selected {
-    background-color: #f0f0f0; /* couleur de fond personnalisée */
-    color: #333; /* couleur du texte personnalisée */
+.accordion-button:focus,
+.accordion-button:focus-within,
+.accordion-collapse.show .accordion-button {
+    color: var(--white-color);
+    background: var(--primary-color);
+    background: -webkit-linear-gradient(0deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: -o-linear-gradient(0deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: -moz-linear-gradient(0deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient(0deg, var(--primary-color) 0%, var(--secondary-color) 100%);
 }
