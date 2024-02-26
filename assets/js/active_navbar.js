@@ -1,18 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const links = document.querySelectorAll("[data-page]");
-  const pages = document.querySelectorAll(".page");
+    function updateActiveClass() {
+        let currentUrl = window.location.pathname.split("/").pop();
+        let navLinks = document.querySelectorAll(".navbar-nav .nav-item a");
+        navLinks.forEach(function (link) {
+            let linkHref = link.getAttribute("href").split("/").pop();
+            if (linkHref === currentUrl) {
+                link.classList.add("active");
+                link.classList.add("inactive"); // Ajouter la classe "inactive" aux liens actifs
+            } else {
+                link.classList.remove("active");
+                link.classList.remove("inactive"); // Supprimer la classe "inactive" des autres liens
+            }
+        });
+    }
+    updateActiveClass();
 
-  links.forEach((link) => {
-    link.addEventListener("click", function (ev) {
-      ev.preventDefault();
-      const targetPageId = this.getAttribute("data-page");
-      pages.forEach((page) => {
-        if (page.id === targetPageId.substring(1)) {
-          page.classList.add("active");
-        } else {
-          page.classList.remove("active");
-        }
-      });
+    let navLinks = document.querySelectorAll(".navbar-nav .nav-item a");
+    navLinks.forEach(function (link) {
+        link.addEventListener("click", function (event) {
+            if (link.classList.contains("inactive")) { // Vérifier si le lien est marqué comme inactif
+                event.preventDefault(); // Empêcher le comportement par défaut du lien
+            }
+        });
     });
-  });
 });

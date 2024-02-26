@@ -1,75 +1,37 @@
-<nav class="sub-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-md-8">
-                <ul class="info">
-                    <li><i class="fa fa-envelope"></i>mocktails-celestes.fr</li>
-                    <li>
-                        <i class="fa fa-map"></i>
-                        <a
-                            href="../assets/pdf/catalogue_mocktails_tchwizin-kreyol.pdf"
-                            target="_blank"
-                            >Télécharger le catalogue</a
-                        >
-                    </li>
-                </ul>
-            </div>
-            <div class="social col-lg-4 col-md-4">
-                <ul class="social-links">
-                    <li>
-                        <a href="#">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</nav>
+<div class="navbar navbar-light bg-light navbar-expand-md px-3">
+	<a href="#" class="navbar-brand">
+		MOCKTAIL CELESTE
+		{# <img src="/static_files/images/logos/logo_1.png" alt="" width="50px" height="50px"/> #}
+	</a>
+	<div class="w-25 mx-auto">
+		<div class="input-icons position-relative">
+			<i class="fa-solid fa-magnifying-glass position-absolute translate-bottom mt-2 ms-2 ps-1  text-secondary"></i>
+			<input class="form-control" id="searchInput" type="text"/>
+		</div>
+	</div>
 
-<header class="header-area header-sticky">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-                    <a href="" class="logo">
-                        <h1>Mocktail</h1>
-                    </a>
-                    <ul class="nav" id="menu">
-                        <li>
-                            <a href="{{ path('app_home') }}">Accueil</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('app_product_index') }}"
-                                >Nos Mocktails</a
-                            >
-                        </li>
-                        <li>
-                            <a href="{{ path('app_contact') }}"
-                                >Nous contacter</a
-                            >
-                        </li>
-                        <li>
-                            <a href="{{ path('app_about_us') }}">A propos</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </div>
-</header>
+	<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="navbar-collapse collapse" id="menu">
+		<ul class="navbar-nav ms-auto" style="list-style:none;">
+			<li class="nav-item mx-3">
+				<a href="{{ path('app_home') }}" class="active">Accueil</a>
+			</li>
+			<li class="nav-item mx-3">
+				<a href="{{ path('app_product_index') }}">Nos Mocktails</a>
+			</li>
+			<li class="nav-item mx-3">
+				<a href="{{ path('app_contact') }}">Nous contacter</a>
+			</li>
+			<li class="nav-item mx-3">
+				<a href="{{ path('app_about_us') }}">A propos</a>
+			</li>
+			<li class="nav-item mx-3">
+				<a class="nav-link">
+					<i class="fa-solid fa-ellipsis fs-4"></i>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
