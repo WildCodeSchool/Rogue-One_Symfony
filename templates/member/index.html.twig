@@ -22,13 +22,15 @@
 							<div class="user-pic">
 								<img src="{{ asset('build/images/team/' ~ member.img) }}" class="img-fluid" alt="User Pic">
 							</div>
-							<h1>{{ member.firstname }}</h1>
-							<h2>{{ member.lastname }}</h2>
-							<span>{{ member.role }}</span>
-							<hr>
-							<p>{{ member.description }}</p>
-							<hr>
-							<a href="{{ member.link }}" target="_blank" class="btn">Voir LinkedIn</a>
+							<ul>
+								<li>{{ member.firstname }}</li>
+								<li>{{ member.lastname }}</li>
+								<span>{{ member.role }}</span>
+								<hr>
+								<li>{{ member.description }}</li>
+								<hr>
+								<a href="{{ member.link }}" target="_blank" class="btn">Voir LinkedIn</a>
+							</ul>
 						</div>
 					</div>
 				{% endfor %}
@@ -36,4 +38,3 @@
 		</div>
 	</section>
 {% endblock %}
-
