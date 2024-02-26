@@ -13,7 +13,7 @@ class CguController extends AbstractController
     {
         return $this->render('cgu/index.html.twig', [
             'pageDescription' => "CGU",
-            'pageName' => "CGU",
+            'pageName' => "Conditions Générales d'Utilisation",
             'banner' => "cgu",
         ]);
     }
