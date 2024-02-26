@@ -1,59 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&display=swap');
+/* Styles */
+@import url('https://fonts.googleapis.com/css2?family=Cuprum&display=swap');
 
-/* Colors */
 :root {
-    --primary-color: #08AEEA;
-    --secondary-color: #2AF598;
-    --tertiary-color: #B4E6F8;
-    --quaternary-color: #EA4408;
+    --main-color: #ff9153;
+    --secondary-color: #ffd143;
     --white-color: #f5f5f5;
     --black-color: #000000;
-    --gradient: radial-gradient(circle farthest-corner at 10% 20%, var(--primary-color) 0%, var(--secondary-color) 90%);
+    --gradient: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 209, 67, 1) 0%, rgba(255, 145, 83, 1) 90%);
+    --gradient2: : #ff9153, -webkit-linear-gradient(0deg, #ff9153 0%, #ffd143 100%), -o-linear-gradient(0deg, #ff9153 0%, #ffd143 100%), -moz-linear-gradient(0deg, #ff9153 0%, #ffd143 100%);
+    background: linear-gradient(0deg, #ff9153 0%, #ffd143 100%);
 }
 
-/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     border: 0;
     outline: 0;
-    box-sizing: border-box;
+    font-family: 'Cuprum', sans-serif;
 }
 
-body {
-    font-family: "Cuprum", sans-serif;
-    background-color: var(--white-color);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
 }
 
-a {
-    text-decoration: none;
+.clearfix {
+    display: inline-block;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #1e1e1e;
-    font-weight: 700;
-    margin-top: 0;
-    margin-bottom: 0;
+html[xmlns] .clearfix {
+    display: block;
 }
 
-p {
-    font-size: 14px;
-    line-height: 28px;
-    color: #4a4a4a;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    vertical-align: middle;
+* html .clearfix {
+    height: 1%;
 }
 
 ul,
@@ -63,18 +47,75 @@ li {
     list-style: none;
 }
 
-/* Selection */
+header,
+nav,
+section,
+article,
+aside,
+footer,
+hgroup {
+    display: block;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-image: var(--white-color);
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+h1,
+h2,
+h3,
+h1,
+h2,
+h6 {
+    color: #1e1e1e;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: 700;
+}
+
+ul {
+    margin-bottom: 0px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 28px;
+    color: #4a4a4a;
+}
+
+img {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* 
+---------------------------------------------
+Global Styles
+--------------------------------------------- 
+*/
+
 ::selection {
-    background: var(--secondary-color);
+    background: #0071f8;
     color: #fff;
 }
 
 ::-moz-selection {
-    background: var(--secondary-color);
+    background: #0071f8;
     color: #fff;
 }
 
-/* Section Styles */
 .section {
     margin-top: 120px;
 }
@@ -89,6 +130,11 @@ li {
     line-height: 56px;
 }
 
+.section-heading h2 em {
+    font-style: normal;
+    color: #0071f8;
+}
+
 .section-heading h1 {
     background: var(--gradient);
     background-clip: text;
@@ -98,23 +144,21 @@ li {
     font-weight: 700;
 }
 
-/* Button Styles */
-.main-button,
 .icon-button a {
     display: inline-block;
-    color: #fff;
     background-color: #1e1e1e;
+    color: #fff;
     font-size: 14px;
-    font-weight: 500;
-    height: 40px;
-    line-height: 40px;
-    padding: 0 30px;
+    font-weight: 400;
+    height: 50px;
+    line-height: 50px;
+    padding: 0px 30px 0px 0px;
     border-radius: 25px;
     transition: all 0.3s;
 }
 
 .icon-button a i {
-    background-color: var(--primary-color);
+    background-color: var(--main-color);
     height: 50px;
     width: 50px;
     text-align: center;
@@ -125,16 +169,43 @@ li {
     margin-left: -1px;
 }
 
-/* Thumbnail */
+.main-button {
+    display: inline-block;
+    color: #fff;
+    background-color: #1e1e1e;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 30px;
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+
 .img-thumbnail {
     width: 50%;
     overflow: hidden;
 }
 
-/* Responsive Styles */
+/* 
+---------------------------------------------
+Responsive Style
+--------------------------------------------- 
+*/
+
+body {
+    overflow-x: hidden;
+}
+
 @media (max-width: 430px) {
-    .section-heading h1,
+    .section-heading h1 {
+        text-align: center;
+    }
+
     .section-heading h2 {
+        font-size: 40px;
+        margin-top: 20px;
+        line-height: 56px;
         text-align: center;
     }
 }
