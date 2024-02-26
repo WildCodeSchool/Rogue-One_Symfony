@@ -14,8 +14,8 @@ class AboutUsController extends AbstractController
         return $this->render(
             'about_us/index.html.twig',
             ['pageName' => "A propos de nous",
-            'pageDescription' => "Nos Mocktails",
-            'banner' => "contact",
+            'pageDescription' => "aboutUs",
+            'banner' => "aboutUs",
             ]
         );
     }
