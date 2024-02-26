@@ -36,8 +36,9 @@
     gap: 20px;
 }
 
-.enjoy-our-mocktails-section article div {
-    text-align: center;
+.enjoy-our-mocktails-section article div,
+.enjoy-our-mocktails-section article main,
+.enjoy-our-mocktails-section article p {
     background-color: #d9d9d9;
     flex-grow: 1;
     flex-basis: 0;
@@ -47,12 +48,6 @@
     max-width: 100%;
     height: auto;
     border-radius: 5px;
-}
-
-.enjoy-our-mocktails-section article main {
-    background-color: #d9d9d9;
-    flex-grow: 1;
-    flex-basis: 0;
 }
 
 .enjoy-our-mocktails-section article main h3 {
@@ -66,9 +61,6 @@
     margin-top: 10px;
     line-height: 1.5;
     color: #666;
-    background-color: #d9d9d9;
-    flex-grow: 1;
-    flex-basis: 0;
     text-overflow: ellipsis;
     overflow: hidden;
 }
