@@ -23,13 +23,6 @@
     background-image: url("../../images/banner-03.jpg");
 }
 
-.main-banner .item span.category em {
-    font-style: normal;
-    color: var(--primary-color);
-
-    color: #f35525;
-}
-
 .main-banner .item h1 {
     font-size: 62px;
     font-weight: 700;
@@ -38,17 +31,6 @@
     line-height: 72px;
     width: 50%;
     margin-bottom: 0px;
-}
-
-.main-banner .owl-dots .active {
-    background-color: #f35525;
-}
-
-.main-banner .owl-nav {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    transform: translateY(-50px);
 }
 
 .carousel-control-next,
