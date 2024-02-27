@@ -18,7 +18,8 @@ class AdminProductController extends AbstractController
     public function index(ProductRepository $productRepository): Response
     {
         return $this->render('admin_product/index.html.twig', [
-            'products' => $productRepository->findAll(),
+            'pageName' => "Liste des Produits",
+            'products' => $productRepository->findAll()
         ]);
     }
 
@@ -37,6 +38,7 @@ class AdminProductController extends AbstractController
         }
 
         return $this->render('admin_product/new.html.twig', [
+            'pageName' => "Nouveau Produits",
             'product' => $product,
             'form' => $form,
         ]);
@@ -46,6 +48,7 @@ class AdminProductController extends AbstractController
     public function show(Product $product): Response
     {
         return $this->render('admin_product/show.html.twig', [
+            'pageName' => "Inspecter Produit",
             'product' => $product,
         ]);
     }
@@ -63,6 +66,7 @@ class AdminProductController extends AbstractController
         }
 
         return $this->render('admin_product/edit.html.twig', [
+            'pageName' => "Modifier Produit",
             'product' => $product,
             'form' => $form,
         ]);
