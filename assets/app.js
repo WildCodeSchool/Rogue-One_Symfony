@@ -18,6 +18,7 @@ import "./js/active_navbar.js";
 import "./js/logonav.js";
 import "./js/footer.js";
 import "./js/heading.js";
+import "./styles/admin/adminDashboard.js";
 
 // start the Stimulus application
 

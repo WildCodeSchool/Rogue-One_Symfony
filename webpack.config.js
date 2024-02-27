@@ -56,7 +56,10 @@ Encore
 
   .addStyleEntry("global", "./assets/styles/global.css")
 
-  .addStyleEntry("adminDashboardCss", "./assets/styles/admin/adminDashboard.css")
+  .addStyleEntry(
+    "adminDashboardCss",
+    "./assets/styles/admin/adminDashboard.css"
+  )
 
   // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
   .enableStimulusBridge("./assets/controllers.json")
