@@ -13,14 +13,12 @@ import "../assets/styles/components/navbar.css";
 import "../assets/styles/components/footer.css";
 import "../assets/styles/components/header.css";
 
-import "../assets/styles/others/faq.css";
-import "../assets/styles/others/members.css";
-
 // any JS you import will output into a single js file (app.js in this case)
 import "./js/active_navbar.js";
 import "./js/logonav.js";
 import "./js/footer.js";
 import "./js/heading.js";
+import "./styles/admin/adminDashboard.js";
 
 // start the Stimulus application
 

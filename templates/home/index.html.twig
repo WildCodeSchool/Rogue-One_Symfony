@@ -1,8 +1,15 @@
 {% extends 'base.html.twig' %}
-
+{% block stylesheets %}
+	{{ parent() }}
+	{{
+    encore_entry_link_tags("homeEntry")
+}}
+{% endblock %}
 {% block content %}
+
 	{% block heading %}{% endblock %}
 	<section id="carouselExampleAutoplaying" class="carousel slide col-sm-12" data-bs-ride="carousel">
+
 		<div class="main-banner">
 			<ul class="carousel-inner">
 				<li class="carousel-item active">
