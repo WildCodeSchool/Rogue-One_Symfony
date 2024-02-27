@@ -39,7 +39,6 @@ Encore
   .addEntry("mocktailEntry_show", "./assets/mocktail_show.js")
   .addEntry("contactEntry", "./assets/contact.js")
   .addEntry("about-usEntry", "./assets/about-us.js")
-  .addEntry("adminEntry", "./assets/admin.js")
   .addEntry("mocktailFilter", "./assets/js/mocktailFilter.js")
   .addEntry("logonav", "./assets/js/logonav.js")
   .addEntry("headingJs", "./assets/js/heading.js")
@@ -56,7 +55,10 @@ Encore
 
   .addStyleEntry("global", "./assets/styles/global.css")
 
-  .addStyleEntry("adminDashboardCss", "./assets/styles/admin/adminDashboard.css")
+  .addStyleEntry(
+    "adminDashboardCss",
+    "./assets/styles/admin/adminDashboard.css"
+  )
 
   // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
   .enableStimulusBridge("./assets/controllers.json")
