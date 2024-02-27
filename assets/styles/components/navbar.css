@@ -42,7 +42,6 @@ input.form-control {
     left: 0;
     width: 100%;
     height: 2px;
-    /* background-image: var(--gradient); */
     transition: width 0.3s ease, left 0.3s ease;
 }
 
@@ -66,4 +65,58 @@ input.form-control {
 
 .navbar ul li {
     display: inline-block;
+}
+
+#logoImg {
+    display: none;
+}
+
+.navbar img {
+    max-width: 150px;
+    height: auto;
+}
+
+.navbar-toggler {
+    background-color: var(--white-color);
+    border-radius: 18px;
+    min-width: 45px;
+    min-height: 45px;
+    padding: 0;
+    outline: 0;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar-toggler:hover {
+    background: var(--primary-color);
+    background: -webkit-linear-gradient(0deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: -o-linear-gradient(0deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: -moz-linear-gradient(0deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient(0deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    padding: 10px 0px;
+    border-bottom: 1px solid #eee;
+}
+
+@media only screen and (max-width: 450px) {
+    .navbar img {
+        content: url('../../images/mc_logo_no_text.png');
+        max-width: 50px;
+        height: auto;
+    }
+
+    .navbar a {
+        display: flex;
+        position: relative;
+        font-size: 20px;
+        align-content: center;
+        justify-content: center;
+        margin-top: 50px;
+
+        & img {
+            margin-top: -50px;
+        }
+    }
 }
