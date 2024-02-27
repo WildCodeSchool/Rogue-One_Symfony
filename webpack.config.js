@@ -42,7 +42,6 @@ Encore
   .addEntry("mocktailFilter", "./assets/js/mocktailFilter.js")
   .addEntry("logonav", "./assets/js/logonav.js")
   .addEntry("headingJs", "./assets/js/heading.js")
-
   .addEntry("adminDashboardJs", "./assets/styles/admin/adminDashboard.js")
 
   // CSS Entry
