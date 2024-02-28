@@ -3,9 +3,9 @@
 {% endblock %} {% block javascripts %}
 {{ encore_entry_script_tags("adminDashboardJs") }}
 {% endblock %} {% block content %}
-<h1>Ajouter une nouvelle Categorie</h1>
+<h1>Ajouter une Nouvelle Categorie</h1>
 
 {{ include("admin_category/_form.html.twig") }}
 
-<a href="{{ path('app_admin_category_index') }}">back to list</a>
+<a href="{{ path('app_admin_category_index') }}">Retour A la Liste</a>
 {% endblock %}
