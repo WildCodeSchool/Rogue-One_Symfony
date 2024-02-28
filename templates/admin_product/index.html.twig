@@ -39,7 +39,7 @@
                                                 />
                                             </td>
                                             <td>{{ product.price }}</td>
-                                            <td>{{ product.detail }}</td>
+                                            <td>{{ product.detail|length > 50 ? product.detail|slice(0, 50) ~ '...' : product.detail }}</td>
                                             <td>
                                                 <a
                                                     href="{{
