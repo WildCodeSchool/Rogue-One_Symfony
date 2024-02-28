@@ -25,10 +25,7 @@ class Product
     private ?string $detail = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $imageName = null;
-
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $imagePath = null;
+    private ?string $image = null;
 
     #[ORM\ManyToOne(inversedBy: 'products')]
     #[ORM\JoinColumn(nullable: false)]
@@ -67,7 +64,14 @@ class Product
 
     public function getImage(): ?string
     {
-        return $this->imagePath;
+        return $this->image;
+    }
+
+    public function setImage(?string $image): static
+    {
+        $this->image = $image;
+
+        return $this;
     }
 
     public function getDetail(): ?string
@@ -78,30 +82,6 @@ class Product
     public function setDetail(string $detail): static
     {
         $this->detail = $detail;
-
-        return $this;
-    }
-
-    public function getImageName(): ?string
-    {
-        return $this->imageName;
-    }
-
-    public function setImageName(?string $imageName): static
-    {
-        $this->imageName = $imageName;
-
-        return $this;
-    }
-
-    public function getImagePath(): ?string
-    {
-        return $this->imagePath;
-    }
-
-    public function setImagePath(?string $imagePath): static
-    {
-        $this->imagePath = $imagePath;
 
         return $this;
     }
