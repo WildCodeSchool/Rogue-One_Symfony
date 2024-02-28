@@ -17,6 +17,9 @@ footer {
     padding: 10px;
     width: 100%;
 
+    & hr {
+        display: none;
+    }
 }
 
 footer a {
@@ -86,14 +89,17 @@ footer h6:after {
     bottom: -20px;
 }
 
-.btn-footer {
-    color: grey;
+footer .btn{
+    color: var(--white-color);
     text-decoration: none;
     border: 1px solid;
-    border-radius: 43px;
+    border-radius: 5px;
     font-size: 13px;
-    padding: 7px 30px;
-    line-height: 47px;
+    line-height: 25px;
+    &:hover{
+        background-color: var(--white-color);
+        color: var(--primary-color);
+    }
 }
 
 .form-footer input[type="text"] {
@@ -123,6 +129,7 @@ footer h6:after {
 
     .col-lg-3 {
         width: 100%;
+        margin-left: 12px
     }
 
     .col-lg-3 h2 {
@@ -135,5 +142,12 @@ footer h6:after {
 
     .col-lg-3.open ul {
         display: block;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px 15px 0px 0px;
     }
 }
