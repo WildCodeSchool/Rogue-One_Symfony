@@ -4,21 +4,19 @@
 			<ul class="row">
 				<div class="col-lg-3 col-md-6 mb-4 mb-lg-0 col-sm-12 ">
 					<h2 class="text-uppercase mb-4">Informations</h2>
+					<hr>
 					<ul class="list-unstyled mb-4">
 						<li>
 							<a href="{{ path('app_about_us') }}" class="text-white">A propos de nous</a>
-						</li>
+						</li>																	</li>
 						<li>
-							<a href="#!" class="text-white">Conditions Générales de Vente</a>
+							<a href="#!" class="text-white">Mentions Légales</a>
 						</li>
 						<li>
 							<a href="#!" class="text-white">Politique de confidentialité</a>
 						</li>
 						<li>
-							<a href="#!" class="text-white">Politique d'expédition</a>
-						</li>
-						<li>
-							<a href="#!" class="text-white">Conditions de remboursement</a>
+							<a href="{{ asset('build/pdf/catalogue_mocktails_tchwizin-kreyol.pdf') }}" class="text-white">Télécharger le catalogue</a>
 						</li>
 					</li>
 				</ul>
@@ -26,6 +24,7 @@
 
 			<div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
 				<h2 class="text-uppercase mb-4">Assistance</h2>
+				<hr>
 				<ul class="list-unstyled">
 					<li>
 						<a href="{{ path('app_contact') }}" class="text-white">Nous contacter</a>
@@ -34,9 +33,7 @@
 						<a href="{{ path('app_member') }}" class="text-white">Notre équipe Dev</a>
 					</li>
 					<li>
-
-						<a href="{{ path('app_faq')}}" class="text-white">FAQ</a>
-
+						<a href="{{ path('app_faq') }}" class="text-white">Foire Aux Questions</a>
 					</li>
 					<li>
 						<a href="{{ path('app_contact') }}" class="text-white">Plan de Site</a>
@@ -46,6 +43,7 @@
 
 			<div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
 				<h2 class="text-uppercase mb-4">Autres</h2>
+				<hr>
 				<ul class="list-unstyled">
 					<li>
 						<a href="#!" class="text-white">Emploi</a>
@@ -55,7 +53,7 @@
 
 			<div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
 				<h2 class="text-uppercase mb-4">S'abonner à la newsletter</h2>
-
+				<hr>
 				<div class="form-outline form-white mb-4">
 					<input type="email" id="form5Example2" class="form-control" placeholder="Em@il"/>
 				</div>

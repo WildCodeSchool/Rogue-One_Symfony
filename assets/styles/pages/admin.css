@@ -56,11 +56,11 @@ body,
 }
 
 .bg-image {
-    background: var(--main-color);
-    background: -webkit-linear-gradient(0deg, var(--main-color) 0%, var(--secondary-color) 100%);
-    background: -o-linear-gradient(0deg, var(--main-color) 0%, var(--secondary-color) 100%);
-    background: -moz-linear-gradient(0deg, var(--main-color) 0%, var(--secondary-color) 100%);
-    background: linear-gradient(0deg, var(--main-color) 0%, var(--secondary-color) 100%);
+    background: var(--primary-color);
+    background: -webkit-linear-gradient(0deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: -o-linear-gradient(0deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: -moz-linear-gradient(0deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient(0deg, var(--primary-color) 0%, var(--secondary-color) 100%);
 }
 
 table td,
@@ -100,11 +100,11 @@ h2 {
 }
 
 table tbody tr:hover td {
-    background: var(--main-color);
-    background: -webkit-linear-gradient(0deg, var(--main-color) 0%, var(--secondary-color) 100%);
-    background: -o-linear-gradient(0deg, var(--main-color) 0%, var(--secondary-color) 100%);
-    background: -moz-linear-gradient(0deg, var(--main-color) 0%, var(--secondary-color) 100%);
-    background: linear-gradient(0deg, var(--main-color) 0%, var(--secondary-color) 100%);
+    background: var(--primary-color);
+    background: -webkit-linear-gradient(0deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: -o-linear-gradient(0deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: -moz-linear-gradient(0deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient(0deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: var(--white-color);
 }
 

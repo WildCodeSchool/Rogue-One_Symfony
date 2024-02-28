@@ -21,32 +21,40 @@ class ProductController extends AbstractController
         $this->entityManager = $entityManager;
     }
 
-    #[Route('/', name: 'index')]
+    #[Route('/product', name: 'index')]
     public function index(Request $request): Response
     {
         $categories = $this->entityManager->getRepository(Category::class)->findAll();
-        $products = $this->entityManager->getRepository(Product::class)->findAll();
 
         $productsPerPage = 10;
-        $totalproducts = count($products);
-        $pagesNumber = ceil($totalproducts / $productsPerPage);
-
         $page = $request->query->getInt('page', 1);
+        $offset = ($page - 1) * $productsPerPage;
+
+        $productRepository = $this->entityManager->getRepository(Product::class);
+        $products = $productRepository->findBy([], null, $productsPerPage, $offset);
+
+        $totalProducts = $productRepository->count([]);
+
+        $pagesNumber = ceil($totalProducts / $productsPerPage);
 
         return $this->render('product/index.html.twig', [
             'pageName' => "Nos Mocktails",
+            'pageDescription' => "product",
             'categories' => $categories,
             'products' => $products,
             'pagesNumber' => $pagesNumber,
             'currentPage' => $page,
+            'banner' => "product",
         ]);
     }
 
     #[Route('/{id}', name: 'show', requirements: ['id' => '\d+'])]
-    public function show(Product $product): Response
+    public function show(Product $product, ProductRepository $productRepository): Response
     {
+        $relatedProducts = $productRepository->findRelatedProducts($product);
         return $this->render('product/show.html.twig', [
             'product' => $product,
+            'relatedProducts' => $relatedProducts,
         ]);
     }
 }

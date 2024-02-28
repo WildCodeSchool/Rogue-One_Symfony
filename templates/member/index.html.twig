@@ -3,6 +3,17 @@
 	{{ parent() }}
 	{{ pageName }}
 {% endblock %}
+
+{% block stylesheets %}
+	{{ parent() }}
+	{{ encore_entry_link_tags("members") }}
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+	{{ encore_entry_script_tags("mocktailFilter")   }}
+{% endblock %}
+
 {% block content %}
 	<section class="py-3 py-md-5 py-xl-8">
 		<div class="container">
@@ -17,23 +28,23 @@
 		<div class="container overflow-hidden">
 			<div class="row ">
 				{% for member in members %}
-					<div class="col-lg-12 col-md-4">
+					<div class="col-lg-6 col-md-6 col-sm-6">
 						<div class="card-box text-center">
 							<div class="user-pic">
-								<img src=" ../assets/images/team/{{member.IMG}}" class="img-fluid" alt="User Pic">
+								<img src="{{ asset('build/images/team/' ~ member.img) }}" class="img-fluid" alt="User Pic">
 							</div>
-							<h1>{{ member.FIRSTNAME}}</h1>
-							<h2>{{ member.LASTNAME}}</h2>
-							<span>{{ member.ROLE}}</span>
+							<h1>{{ member.firstname }}</h1>
+							<h2>{{ member.lastname }}</h2>
+							<span>{{ member.role }}</span>
 							<hr>
-							<p>{{member.DESCRIPTION}}</p>
+							<p>{{ member.description }}</p>
 							<hr>
-							<a href="{{member.LINK}}" target="_blank" class="btn">Voir LinkedIn</a>
+							<a href="{{ member.link }}" target="_blank" class="btn">Voir LinkedIn</a>
 						</div>
 					</div>
 				{% endfor %}
-				{# {{ dump (members)}} #}
 			</div>
 		</div>
 	</section>
 {% endblock %}
+

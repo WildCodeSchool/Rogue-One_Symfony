@@ -4,7 +4,27 @@
 	{{ parent() }}
 {% endblock %}
 
+{% block stylesheets %}
+	{{ parent() }}
+	{{ encore_entry_link_tags("faq") }}
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+	{{ encore_entry_script_tags("mocktailFilter")   }}
+{% endblock %}
+
+
 {% block content %}
+	<div class="container">
+		<div class="row justify-content-md-center">
+			<div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+				<hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+				<p class="display-5 mb-4 mb-md-5 text-center">{{pageName}}</p>
+				<hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+			</div>
+		</div>
+	</div>
 	<div class="single-mocktail section">
 		<div class="container">
 			<div class="row">
@@ -29,4 +49,3 @@
 		</div>
 	</div>
 {% endblock %}
-

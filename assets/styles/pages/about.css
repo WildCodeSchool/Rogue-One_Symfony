@@ -16,7 +16,7 @@
   width: 110px;
   height: 110px;
   line-height: 110px;
-  background-color: var(--main-color);
+  background-color: var(--primary-color);
   border-radius: 50%;
   text-align: center;
   position: absolute;
