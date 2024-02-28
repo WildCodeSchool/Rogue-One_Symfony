@@ -1,15 +1,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap');
 
-
 :root {
-    --main-color: #ff9153;
-    --secondary-color: #ffd143;
+    --primary-color: #3db3fc;
+    --secondary-color: #3be1ad;
     --white-color: #f5f5f5;
     --black-color: #000000;
-    --gradient: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 209, 67, 1) 0%, rgba(255, 145, 83, 1) 90%);
-    --gradient2: : #ff9153, -webkit-linear-gradient(0deg, #ff9153 0%, #ffd143 100%), -o-linear-gradient(0deg, #ff9153 0%, #ffd143 100%), -moz-linear-gradient(0deg, #ff9153 0%, #ffd143 100%);
-    background: linear-gradient(0deg, #ff9153 0%, #ffd143 100%);
+    --gradient: radial-gradient(circle farthest-corner at 10% 20%, var(--primary-color)  0%, var(--secondary-color) 90%);
+    --gradient2: : var(--primary-color), -webkit-linear-gradient(0deg, var(--primary-color) 0%, var(--secondary-color) 100%), -o-linear-gradient(0deg, var(--primary-color) 0%, var(--secondary-color) 100%), -moz-linear-gradient(0deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient(0deg, var(--primary-color) 0%, var(--secondary-color) 100%);
 }
 
 * {
@@ -17,7 +16,7 @@
     padding: 0;
     border: 0;
     outline: 0;
-    font-family: 'Cuprum', sans-serif;
+    font-family: "Arima", system-ui;
 }
 
 .clearfix:after {
@@ -160,7 +159,7 @@ Global Styles
 }
 
 .icon-button a i {
-    background-color: var(--main-color);
+    background-color: var(--primary-color);
     height: 50px;
     width: 50px;
     text-align: center;

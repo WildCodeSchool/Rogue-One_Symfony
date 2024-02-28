@@ -49,10 +49,12 @@ class ProductController extends AbstractController
     }
 
     #[Route('/{id}', name: 'show', requirements: ['id' => '\d+'])]
-    public function show(Product $product): Response
+    public function show(Product $product, ProductRepository $productRepository): Response
     {
+        $relatedProducts = $productRepository->findRelatedProducts($product);
         return $this->render('product/show.html.twig', [
             'product' => $product,
+            'relatedProducts' => $relatedProducts,
         ]);
     }
 }

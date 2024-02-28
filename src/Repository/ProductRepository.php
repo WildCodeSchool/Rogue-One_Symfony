@@ -21,28 +21,39 @@ class ProductRepository extends ServiceEntityRepository
         parent::__construct($registry, Product::class);
     }
 
-//    /**
-//     * @return Product[] Returns an array of Product objects
-//     */
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('p')
-//            ->andWhere('p.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->orderBy('p.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
+    /**
+     * Récupère le dernier produit ajouté à la base de données.
+     *
+     * @return Product|null Le dernier produit ajouté ou null s'il n'y a pas de produits dans la base de données
+     */
+    public function findLatestProduct(): ?Product
+    {
+        return $this->createQueryBuilder('p')
+            ->orderBy('p.id', 'DESC')
+            ->setMaxResults(1)
+            ->getQuery()
+            ->getOneOrNullResult();
+    }
 
-//    public function findOneBySomeField($value): ?Product
-//    {
-//        return $this->createQueryBuilder('p')
-//            ->andWhere('p.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->getQuery()
-//            ->getOneOrNullResult()
-//        ;
-//    }
+   /**
+     * Récupère les produits similaires à partir de la même catégorie que le produit actuel.
+     *
+     * @param Product $product Le produit pour lequel récupérer les produits similaires
+     * @param int $limit Le nombre maximal de produits similaires à récupérer
+     * @return Product[] Liste des produits similaires
+     */
+    public function findRelatedProducts(Product $product, int $limit = 4): array
+    {
+        $qb = $this->createQueryBuilder('p');
+
+        return $qb->where($qb->expr()->andX(
+            $qb->expr()->eq('p.category', ':categoryId'),
+            $qb->expr()->neq('p.id', ':productId')
+        ))
+            ->setParameter('categoryId', $product->getCategory()->getId())
+            ->setParameter('productId', $product->getId())
+            ->setMaxResults($limit)
+            ->getQuery()
+            ->getResult();
+    }
 }
