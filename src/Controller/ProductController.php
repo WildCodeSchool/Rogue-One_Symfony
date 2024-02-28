@@ -49,10 +49,23 @@ class ProductController extends AbstractController
     }
 
     #[Route('/{id}', name: 'show', requirements: ['id' => '\d+'])]
-    public function show(Product $product): Response
+    public function show(Product $product, EntityManagerInterface $entityManager): Response
     {
+        $categoryId = $product->getCategory()->getId();
+
+        // Construire la requête SQL pour récupérer les produits similaires
+        $query = $entityManager->createQuery(
+            'SELECT p FROM App\Entity\Product p
+             WHERE p.category = :categoryId AND p.id != :productId'
+        )->setParameter('categoryId', $categoryId)
+         ->setParameter('productId', $product->getId())
+         ->setMaxResults(4); // Limite le nombre de résultats à 4
+
+        $relatedProducts = $query->getResult();
+
         return $this->render('product/show.html.twig', [
             'product' => $product,
+            'relatedProducts' => $relatedProducts,
         ]);
     }
 }
