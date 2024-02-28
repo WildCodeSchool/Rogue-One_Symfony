@@ -33,14 +33,10 @@
                                             <td>{{ product.name }}</td>
                                             <td>
                                                 <img
-                                                    src="{{ asset('build/images/mocktails/' ~ product.image) }}"
-                                                    style="
-                                                        max-width: 30px;
-                                                        height: auto;
-                                                    "
-                                                    class="img-thumbnail"
-                                                    alt="..."
-                                                />
+                                                src="{{ asset('build/images/mocktails/' ~ product.image) }}"
+                                                class="img-thumbnail"
+                                                alt="..."
+                                            />
                                             </td>
                                             <td>{{ product.price }}</td>
                                             <td>{{ product.detail }}</td>
@@ -75,6 +71,16 @@
                                         </tr>
                                         {% endfor %}
                                     </tbody>
+                                    <div
+                                    class="col-lg- col-md-6 col-sm-12 align-self-center mb-30 properties-items col-md-6 adv"
+                                >
+                                    <div>
+                                        <a href="{{ path('app_admin_product_new') }}" class="btn btn-success">
+                                            <i class="fa-solid fa-plus"></i>
+                                            Ajouter un Nouveau Produit</a
+                                        >
+                                        </div>
+                                    </div>
                                 </table>
                             </div>
                         </div>
