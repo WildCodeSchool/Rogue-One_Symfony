@@ -10863,3 +10863,8 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
     margin-left: -15rem;
   }
 }
+
+.img-thumbnail{
+  max-width: 30px;
+  height: auto;
+}
