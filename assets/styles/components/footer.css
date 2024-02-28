@@ -149,5 +149,9 @@ footer .btn{
         justify-content: center;
         align-items: center;
         border-radius: 15px 15px 0px 0px;
+      & .text-center {
+        display: none;
+      }
     }
+    
 }
