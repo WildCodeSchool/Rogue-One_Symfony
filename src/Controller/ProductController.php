@@ -48,14 +48,10 @@ class ProductController extends AbstractController
         ]);
     }
 
-
-
     #[Route('/{id}', name: 'show', requirements: ['id' => '\d+'])]
     public function show(Product $product, ProductRepository $productRepository): Response
     {
-        // Récupérer les produits similaires à partir du repository
         $relatedProducts = $productRepository->findRelatedProducts($product);
-    
         return $this->render('product/show.html.twig', [
             'product' => $product,
             'relatedProducts' => $relatedProducts,

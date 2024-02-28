@@ -47,14 +47,13 @@ class ProductRepository extends ServiceEntityRepository
         $qb = $this->createQueryBuilder('p');
 
         return $qb->where($qb->expr()->andX(
-                $qb->expr()->eq('p.category', ':categoryId'),
-                $qb->expr()->neq('p.id', ':productId')
-            ))
+            $qb->expr()->eq('p.category', ':categoryId'),
+            $qb->expr()->neq('p.id', ':productId')
+        ))
             ->setParameter('categoryId', $product->getCategory()->getId())
             ->setParameter('productId', $product->getId())
             ->setMaxResults($limit)
             ->getQuery()
             ->getResult();
     }
-
 }
