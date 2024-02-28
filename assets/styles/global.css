@@ -1,5 +1,6 @@
-/* Styles */
-@import url('https://fonts.googleapis.com/css2?family=Cuprum&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap');
+
 
 :root {
     --main-color: #ff9153;
@@ -63,7 +64,8 @@ hgroup {
 
 html,
 body {
-    background-image: var(--white-color);
+    font-family: "Arima", system-ui;
+    background-color: var(--white-color);
     -ms-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -201,7 +203,6 @@ body {
     .section-heading h1 {
         text-align: center;
     }
-
     .section-heading h2 {
         font-size: 40px;
         margin-top: 20px;
